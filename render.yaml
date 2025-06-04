@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mspr63-back
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    branch: main
+    autoDeploy: true
