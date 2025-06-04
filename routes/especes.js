@@ -112,7 +112,7 @@ router.post('/classify', async (req, res) => {
     fs.writeFileSync(imagePath, imageBuffer);
 
     // Appeler le script Python
-    const pythonScript = path.join(__dirname, '../../Model/test_model.py');
+    const pythonScript = path.join(__dirname, '../Model/test_model.py');
     exec(`python "${pythonScript}" "${imagePath}"`, async (error, stdout, stderr) => {
       fs.unlinkSync(imagePath); // Supprimer après traitement
 
