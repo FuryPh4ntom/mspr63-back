@@ -7,3 +7,6 @@ services:
     plan: free
     branch: main
     autoDeploy: true
+    envVars:
+      - key: MONGO_URI
+        value: your-mongodb-uri-here
