@@ -9,7 +9,7 @@ import os
 import json
 
 # Chargement des labels
-with open(r"labels.txt", "r") as f:
+with open(r"C:\Users\powab\Desktop\MSPR\Backend\app\mspr63-back\Model\labels.txt", "r") as f:
     labels = [line.strip() for line in f.readlines()]
 
 # Chargement du modèle
@@ -18,7 +18,7 @@ model = ViTForImageClassification.from_pretrained(
     num_labels=len(labels),
     ignore_mismatched_sizes=True
 )
-model.load_state_dict(torch.load(r"model_empreinte_vit.pth", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(r"C:\Users\powab\Desktop\MSPR\Backend\app\mspr63-back\Model\model_empreinte_vit.pth", map_location=torch.device('cpu')))
 model.eval()
 
 def predict(img_path):
